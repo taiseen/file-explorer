@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
+
 const Folder = ({ explorerData, handleFolderFileCreation }) => {
+
     const [isExpand, setIsExpand] = useState(false);
     const [showInput, setShowInput] = useState({
         visible: false,
@@ -10,7 +12,6 @@ const Folder = ({ explorerData, handleFolderFileCreation }) => {
 
     const handelClick = (e, isFolder) => {
         e.stopPropagation();
-        console.log(isFolder);
 
         setIsExpand(true);
         setShowInput({
@@ -21,6 +22,7 @@ const Folder = ({ explorerData, handleFolderFileCreation }) => {
 
     const onCreateFolder = (e) => {
 
+        // enter key event...
         if (e.keyCode === 13 && e.target.value) {
 
             handleFolderFileCreation(explorerData.id, e.target.value, showInput.isFolder);
@@ -71,18 +73,20 @@ const Folder = ({ explorerData, handleFolderFileCreation }) => {
                                     // clicking outside then close it...
                                     onBlur={() => setShowInput(pre => ({ ...pre, visible: false }))}
                                     onKeyDown={(e) => onCreateFolder(e)}
-                                    // onChange={(e) => onCreateFolder(e)}
+                                // onChange={(e) => onCreateFolder(e)}
                                 />
                             </div>
                         )
                     }
                     {
-                        explorerData.items.map(item => {
-                            return (
-                                // Recursive function call for printing all children...
-                                <Folder key={item.id} explorerData={item} />
-                            )
-                        })
+                        explorerData.items.sort().map(item => (
+                            // Recursive function call for printing all children...
+                            <Folder
+                                key={item.id}
+                                explorerData={item}
+                                handleFolderFileCreation={handleFolderFileCreation}
+                            />
+                        ))
                     }
                 </div>
             </section>

@@ -1,7 +1,7 @@
+import useTraverseTree from "./hooks/useTraverseTree";
 import Folder from "./components/Folder";
 import explorer from "./constants/data.js";
 import { useState } from 'react';
-import useTraverseTree from "./hooks/useTraverseTree";
 
 
 const App = () => {

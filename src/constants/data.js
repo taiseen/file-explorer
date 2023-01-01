@@ -1,61 +1,61 @@
 // it is a Tree Data Structure...
 
 const explorer = {
-    id:"1",
+    id: "1",
     name: "root",
     isFolder: true,
     items: [
         {
-            id:"2",
+            id: "2",
             name: "public",
             isFolder: true,
             items: [
                 {
+                    id: "11",
+                    name: "index.html",
+                    isFolder: false,
+                    items: []
+                },
+            ]
+        },
+        {
+            id: "7",
+            name: "src",
+            isFolder: true,
+            items: [
+                {
                     id:"3",
-                    name: "public nested 1",
+                    name: "components",
                     isFolder: true,
                     items: [
                         {
                             id:"4",
-                            name: "index.html",
+                            name: "Header.jsx",
                             isFolder: false,
                             items: []
                         },
                         {
                             id:"5",
-                            name: "hello.html",
+                            name: "Footer.jsx",
                             isFolder: false,
                             items: []
                         }
                     ]
                 },
                 {
-                    id:"6",
-                    name: "public_nested_file",
-                    isFolder: false,
-                    items: []
-                }
-            ]
-        },
-        {
-            id:"7",
-            name: "src",
-            isFolder: true,
-            items: [
-                {
-                    id:"8",
+                    id: "8",
                     name: "App.js",
                     isFolder: false,
                     items: []
                 },
                 {
-                    id:"9",
-                    name: "Index.js",
+                    id: "9",
+                    name: "index.js",
                     isFolder: false,
                     items: []
                 },
                 {
-                    id:"10",
+                    id: "10",
                     name: "styles.css",
                     isFolder: false,
                     items: []
@@ -63,7 +63,7 @@ const explorer = {
             ]
         },
         {
-            id:"11",
+            id: "11",
             name: "package.json",
             isFolder: false,
             items: []

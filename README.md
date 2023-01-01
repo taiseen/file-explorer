@@ -1,6 +1,6 @@
 > 08 - Dec - 2022
 
-# File Explorer
+# File Explorer | [Live Link 🔗](https://file-folder-exp.netlify.app)
 
 
 ## Technology used:
@@ -11,5 +11,12 @@
 ## Learning Context:
 * Tree Data Structure use here
 * Parent & child node have similar data structure
-* DSA algorithm use here
+* DFS algorithm use here
 * Recursive function call for printing all children...
+
+
+<!-- 
+
+https://app.netlify.com/sites/file-folder-exp/deploys 
+
+-->
